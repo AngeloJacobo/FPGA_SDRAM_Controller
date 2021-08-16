@@ -3,11 +3,13 @@ Date: August 12,2021
 
 # Inside the src folder are:   
 * sdram_controller.v -> Controller for Synchronous Dynamic RAM. Specs are given below.  
-* comprehensive_tb.v -> Tests the sdram controller by writing to all 2^24 addresses of SDRAM then reading it all back.  
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; - key[0] writes deterministic data to all addresses  
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; - key[1] reads data from all addresses and check if the data follows the predetermined pattern  
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; - key[2] injects 10240 errors when pressed along with key[0]   
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; - number of errors read will be displayed on the seven-segment LEDs  
+* comprehensive_tb.v -> Tests the sdram controller by writing to all 2^24 addresses of SDRAM then   
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; reading it all back.  
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; - key[0] writes deterministic data to all 2^24 addresses  
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; - key[1] reads data from all addresses and check if the data follows the  
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; predetermined pattern  
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; - key[2] injects 10240 errors when pressed along with key[0]   
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; - number of errors read will be displayed on the seven-segment LEDs  
 * bin2bcd.v -> binary to bcd converter to display the value of error_q to seven-segment LEDs
 * LED_mux.v -> LED multiplexing module for seven-segment LEDs
 * comprehensive_tb.ucf -> Constraint file for comprehensive_tb.v
